@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}{{category}} - Интернет-магазин{% endblock %}
+
+{% block content %}
+    <h2>{{ category }}</h2>
+    <ul>
+        {% for item in items %}
+            <li><a href="/{{ category }}/{{ item }}">{{ item }}</a></li>
+        {% endfor %}
+    </ul>
+{% endblock %}
